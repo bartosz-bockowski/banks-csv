@@ -33,9 +33,7 @@ public class BankService {
         for (CSVRecord record : csvParser) {
             String id = record.get(0);
             String name = record.get(1);
-            Bank bank = new Bank();
-            bank.setBank_identifier(id);
-            bank.setName(name);
+            Bank bank = new Bank(id, name);
             csvData.add(save(bank));
         }
 
